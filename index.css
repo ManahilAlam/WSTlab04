@@ -1,0 +1,58 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+}
+
+.left, .right {
+    width: 50%;
+    height: 100vh;
+}
+
+.left {
+    background-color: #cdb4db; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label
+{
+    text-align: center;
+}
+
+.right {
+    background-color: #ffc8dd; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right imgc{
+    height: 20px;
+}
+
+
+
+
+.logincontainer {
+    background-color: #ffafcc;
+    text-align: center;
+    border: 5px solid white;
+    width: 200px;
+
+}
+.submitbtn
+{
+    text-decoration-color: #ffc8dd;
+    background-color: white;
+}
+.pdash
+{
+    color: #ffafcc;
+    border: 1px solid black;
+}
+

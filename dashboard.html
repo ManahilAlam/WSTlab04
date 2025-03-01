@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <h1 class="h1">Welcome to the Dashboard</h1>
+
+    
+    <br>
+    <div class="displaycontainer">
+        <p class="pdash">Email: <span id="displayEmail"></span></p>
+        
+        <p class="pdash">Password: <span id="displayPassword"></span></p>
+        <br>
+        <button class="logoutbtn"  onclick="logout()">Logout</button>
+    </div>
+   
+
+    <script>
+        // Retrieve credentials from localStorage
+        document.getElementById("displayEmail").innerText = localStorage.getItem("email");
+        document.getElementById("displayPassword").innerText = localStorage.getItem("password");
+
+        function logout() {
+            // Clear stored credentials
+            localStorage.clear();
+            // Redirect back to login
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

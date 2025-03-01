@@ -3,14 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="login-form">
-        <h1 class="heading1">Login</h1>
-
+    <div class="left">
+        <div class="login-form">      
+            <div class="logincontainer">
+                <h1 class="heading1">Login</h1>
+                <form onsubmit="return checkLogin()">
+                    <div class="fieldscontainers">
+                        <label for="Email">Enter your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <br>
+                    <div class="fieldscontainers">
+                        <label for="Password">Enter your Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <br>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="errorMessage" style="color: red;"></p>
+            </div>
+        </div>
     </div>
-    
+    <div class="imgc"><img src="file:///C:/Users/Dell/Downloads/undraw_order-flowers_81uq%20(1).svg" alt=""></div>
+
+    <script>
+        function checkLogin() {
+            
+            const hardcodedEmail = "manahil.ba.alam@gmail.com";
+            const hardcodedPassword = "password123";
+
+            
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            
+            if (email === hardcodedEmail && password === hardcodedPassword) {
+                
+                localStorage.setItem("email", email);
+                localStorage.setItem("password", password);
+
+                window.location.href = "dashboard.html";
+                return false; 
+            } else {
+                document.getElementById("errorMessage").innerText = "Invalid email or password!";
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
