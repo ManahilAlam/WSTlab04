@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topimage {
+    border: 0px ;  
+    padding: 0px;             
+    text-align: center;       
+    background-color: lightgray;
+}
+
+.topimage img {
+    margin: 0 auto;
+    height: 500px;     
+    width:100%;
+
+}
+.topimage::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;     
+    width:100%;
+    background: rgba(189, 224, 254, 0.9);
+    
+}
+.toptext
+{
+    position: absolute;
+    top: 30%;
+    right: 31%;
+    color: #415a77;
+    z-index: 2; 
+    font-family: 'Aboreto';
+    font-size: 19px;   
+}
+.browsebooksbtn{
+    position: absolute;
+    top: 70%;
+    right: 48%;
+    height: 20px;
+    width: 72px;
+    border: none;
+    text-align: center;
+    color:white;
+    font-size: 10px;
+    z-index: 2;
+    background-color: black;
+}
+.gallery
+{
+    display: inline-block;
+    border: 1px solid black;
+    margin:10px;
+
+}
+.gallery .desc{
+    padding: 10px;
+    text-align: center;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: left;
+    z-index: 10;
+
+}
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li{
+    margin: 10px;
+}
+.navbar ul li a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+.navbar ul img{
+    text-align: left;
+    
+}
